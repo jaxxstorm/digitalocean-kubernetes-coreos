@@ -38,6 +38,5 @@ EOL
 
   addons_include = [
     "https://raw.githubusercontent.com/digitalocean/digitalocean-cloud-controller-manager/master/releases/v0.1.6.yml",
-    "https://raw.githubusercontent.com/jetstack/cert-manager/master/contrib/manifests/cert-manager/with-rbac.yaml",
   ]
 }
