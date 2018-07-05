@@ -17,3 +17,8 @@ variable "digitalocean_droplet_size" {
 variable "count" {
   default = 1
 }
+
+variable "tags" {
+  type    = "list"
+  default = []
+}

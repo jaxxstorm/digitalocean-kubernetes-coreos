@@ -1,3 +1,4 @@
 provider "digitalocean" {
-  token = "${var.digital_ocean_token}"
+  version = "0.1.3"
+  token   = "${var.digital_ocean_token}"
 }
