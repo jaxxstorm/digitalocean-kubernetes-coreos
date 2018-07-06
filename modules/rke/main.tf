@@ -103,7 +103,7 @@ spec:
       - name: external-dns
         image: registry.opensource.zalan.do/teapot/external-dns:latest
         args:
-        - --source=service 
+        - --source=ingress
         - --domain-filter=${var.digital_ocean_domain}
         - --provider=digitalocean
         env:
