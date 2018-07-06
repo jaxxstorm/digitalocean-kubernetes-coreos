@@ -45,9 +45,10 @@ resource "digitalocean_record" "public" {
 */
 
 module "rancher" {
-  source              = "modules/rke"
-  ssh_key             = "${file("~/.ssh/id_rsa_personal")}"
-  addresses           = ["${module.k8s.addresses}"]
-  kube_config_path    = "/tmp/rancher.yaml"
-  digital_ocean_token = "${var.digital_ocean_token}"
+  source               = "modules/rke"
+  ssh_key              = "${file("~/.ssh/id_rsa_personal")}"
+  addresses            = ["${module.k8s.addresses}"]
+  kube_config_path     = "/tmp/rancher.yaml"
+  digital_ocean_token  = "${var.digital_ocean_token}"
+  digital_ocean_domain = "${var.digital_ocean_domain}"
 }
