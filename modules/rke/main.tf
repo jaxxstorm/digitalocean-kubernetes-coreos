@@ -1,9 +1,11 @@
 data "rke_node_parameter" "nodes" {
   #count   = "${length(var.addresses)}"
-  address = "${var.addresses[count.index]}"
-  user    = "core"
-  role    = ["controlplane", "worker", "etcd"]
-  ssh_key = "${var.ssh_key}"
+  address           = "${var.addresses[count.index]}"
+  node_name         = "${var.node_names[count.index]}"
+  hostname_override = "${var.node_names[count.index]}"
+  user              = "core"
+  role              = ["controlplane", "worker", "etcd"]
+  ssh_key           = "${var.ssh_key}"
 }
 
 resource rke_cluster "cluster" {
