@@ -22,6 +22,7 @@ resource "digitalocean_droplet" "droplet" {
   #tags               = ["{var.tags}"]
 }
 
+/*
 resource "digitalocean_record" "droplet" {
   count  = "${var.count}"
   domain = "${var.digitalocean_domain}"
@@ -30,3 +31,5 @@ resource "digitalocean_record" "droplet" {
   value  = "${element(digitalocean_droplet.droplet.*.ipv4_address, count.index)}"
   ttl    = 60
 }
+*/
+
